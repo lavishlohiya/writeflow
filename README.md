@@ -176,6 +176,6 @@ Licensed under the **MIT License**.
 
 ---
 
-# 👨💻 Author
+#  Author
 
 **Lavish Lohiya**
