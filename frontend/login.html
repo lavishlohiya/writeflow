@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog API</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="panel auth-panel" id="authPanel">
+      <div class="panel-head">
+        <div>
+          <div class="brand">Blog</div>
+          <h2>Sign in</h2>
+        </div>
+        <div class="segmented">
+          <button class="segment active" id="loginTab" type="button">Login</button>
+          <button class="segment" id="registerTab" type="button">Register</button>
+        </div>
+      </div>
+
+      <form id="loginForm" class="form-stack">
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" placeholder="Your password" required />
+        </label>
+        <button class="primary" type="submit">Login</button>
+      </form>
+
+      <form id="registerForm" class="form-stack hidden">
+        <label>
+          <span>Username</span>
+          <input type="text" name="username" placeholder="Your name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" placeholder="Create a password" required />
+        </label>
+        <button class="primary" type="submit">Create account</button>
+      </form>
+
+      <p class="message" id="authMessage"></p>
+    </section>
+
+    <section class="dashboard hidden" id="appView">
+      <header class="topbar">
+        <div>
+          <div class="brand">Blog</div>
+          <p id="userLine">Ready.</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost" id="refreshFeed" type="button">Refresh</button>
+          <button class="ghost" id="logoutBtn" type="button">Logout</button>
+        </div>
+      </header>
+
+      <div class="grid">
+        <aside class="panel sidebar">
+          <div class="panel-head compact">
+            <div>
+              <h2>New post</h2>
+              <p>Publish something short and sharp.</p>
+            </div>
+          </div>
+
+          <form id="createPostForm" class="form-stack">
+            <label>
+              <span>Title</span>
+              <input type="text" name="title" maxlength="120" placeholder="A crisp title" required />
+            </label>
+            <label>
+              <span>Content</span>
+              <textarea name="content" rows="7" placeholder="Write your post..." required></textarea>
+            </label>
+            <button class="primary" type="submit">Publish</button>
+          </form>
+
+          <div class="search-box">
+            <label>
+              <span>Search</span>
+              <input id="searchInput" type="search" placeholder="Find posts..." />
+            </label>
+          </div>
+        </aside>
+
+        <section class="panel feed">
+          <div class="panel-head compact">
+            <div>
+              <h2>Feed</h2>
+              <p>Browse the latest posts and open one to manage comments.</p>
+            </div>
+          </div>
+          <div id="postsList" class="posts-list"></div>
+          <div class="pagination" id="feedPagination">
+            <button class="ghost" id="prevPageBtn" type="button">Previous</button>
+            <span id="pageInfo" class="page-info">Page 1</span>
+            <button class="ghost" id="nextPageBtn" type="button">Next</button>
+          </div>
+        </section>
+
+        <section class="panel detail">
+          <div class="panel-head compact">
+            <div>
+              <h2>Post detail</h2>
+              <p>Open a post from the feed.</p>
+            </div>
+          </div>
+
+          <div id="detailEmpty" class="empty-state">
+            Select a post to view or comment.
+          </div>
+
+          <article id="postDetail" class="detail-card hidden">
+            <div id="detailActions" class="detail-actions hidden">
+              <div class="owner-badge">Owner / Admin</div>
+              <div class="detail-action-buttons">
+                <button class="ghost" id="toggleEditBtn" type="button">Edit</button>
+                <button class="danger" id="deletePostBtn" type="button">Delete</button>
+              </div>
+            </div>
+
+            <div class="detail-copy">
+              <h3 id="detailTitle"></h3>
+              <p id="detailMeta" class="meta"></p>
+              <p id="detailContent" class="content"></p>
+            </div>
+
+            <section id="editPanel" class="edit-panel hidden">
+              <form id="editPostForm" class="form-stack">
+                <label>
+                  <span>Edit content</span>
+                  <textarea name="content" rows="6" required></textarea>
+                </label>
+                <div class="row">
+                  <button class="primary" type="submit">Update</button>
+                  <button class="ghost" id="cancelEditBtn" type="button">Cancel</button>
+                </div>
+              </form>
+            </section>
+
+            <section class="comments">
+              <div class="comments-head">
+                <h4>Comments</h4>
+                <span id="commentsCount">0</span>
+              </div>
+              <form id="commentForm" class="inline-form">
+                <input type="text" name="content" placeholder="Add a comment..." required />
+                <button class="primary" type="submit">Send</button>
+              </form>
+              <div id="commentsList" class="comments-list"></div>
+            </section>
+          </article>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
