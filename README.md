@@ -7,7 +7,7 @@
 ## 🚀 Tech Stack
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=nodejs,express,postgres,html,css,js,docker,git,github,vscode" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,postgres,html,css,js,git,github,vscode" />
 </p>
 
 ### Backend
@@ -145,13 +145,15 @@ npm start
 
 ## Dashboard
 
-c:\Users\love lohiya\OneDrive\Pictures\Screenshots\Screenshot 2026-06-29 122119.png
+<img width="1920" height="918" alt="Screenshot 2026-06-29 122119" src="https://github.com/user-attachments/assets/5d3d3b28-0984-4ab5-b86a-e06d881ebb72" />
+
 
 ---
 
 ## Login
 
-c:\Users\love lohiya\OneDrive\Pictures\Screenshots\Screenshot 2026-06-29 122207.png
+<img width="1920" height="914" alt="Screenshot 2026-06-29 122207" src="https://github.com/user-attachments/assets/92a72ef7-6fa1-421a-b89b-bb1b931d254d" />
+
 
 ---
 
