@@ -1,6 +1,6 @@
 # WriteFlow
 
-> A full-stack blogging platform built to learn production-style backend development using Node.js, Express.js, PostgreSQL, and JWT Authentication.
+> WriteFlow is a full-stack blogging application that enables users to securely create, manage, and interact with posts through a scalable REST API powered by Node.js, Express.js, PostgreSQL, and JWT Authentication.
 
 ---
 
